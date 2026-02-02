@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BikeZone | Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Contact Page Styles */
+        .contact-container {
+            min-height: 100vh;
+            background: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        .contact-box {
+            background: #fff;
+            width: 100%;
+            max-width: 900px;
+            display: flex;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .contact-info {
+            width: 40%;
+            background: #300101;
+            color: white;
+            padding: 40px;
+        }
+
+        .contact-info h2 {
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            margin-bottom: 15px;
+            color: #ddd;
+        }
+
+        .contact-form {
+            width: 60%;
+            padding: 40px;
+            background-color: #ccc;
+        }
+
+        .contact-form h2 {
+            margin-bottom: 20px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        .contact-form textarea {
+            resize: none;
+            height: 120px;
+        }
+
+        .contact-form button {
+            background: #27aa23;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .contact-form button:hover {
+            background: #005515;
+        }
+
+        .contact-info a{
+            text-decoration: none;
+            color: #ffae00;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+    <h2>BikeZone</h2>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<!-- Contact Section -->
+<section class="contact-container">
+    <div class="contact-box">
+
+        <!-- Left Info -->
+        <div class="contact-info">
+            <h2>Contact BikeZone</h2>
+            <p>Have questions about bikes, pricing, or test rides?</p>
+            <p><strong>Address:</strong><br>
+            <a href="https://www.google.com/maps/place/Sidlaghatta,+Karnataka+562105/@13.3909258,77.859809,2244m/data=!3m1!1e3!4m6!3m5!1s0x3bb1f90979489c87:0xf7ac5b3da7adefc5!8m2!3d13.3936652!4d77.8653126!16zL20vMGY2OTh0?authuser=0&entry=ttu&g_ep=EgoyMDI2MDEyOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="contact-link">
+                                  Sidlaghatta, Indian
+                  </a>   
+        </p>
+            <p><strong>Phone:</strong><br>
+              <a href="tel:+917411340075" class="phone-link">+91 98765 43210</a></p>
+            <p><strong>Email:</strong><br>
+            <a href="#" class="contact-link">
+                     enochdeevenvm@gmail.com
+                    </a>
+            </p>
+        </div>
+
+        <!-- Right Form -->
+        <div class="contact-form">
+            <h2>Send Us a Message</h2>
+            <form id="c_form">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button id="btnsubmit" type="submit">Send Message</button>
+                <br>
+                <p id="response"></p>
+            </form>
+        </div>
+
+    </div>
+</section>
+
+<script>
+    
+    document.getElementById('c_form').addEventListener('submit', function(e){
+        e.preventDefault();
+        let mgs = document.getElementById('name').value;
+        let response = document.getElementById('response');
+        response.textContent = "Hi " + mgs + " this is only static webpage. My team will contact you soo....!" ;
+    })
+</script>
+
+</body>
+</html>
